@@ -2,8 +2,16 @@ import chalk from "chalk";
 import express from "express";
 import mongoose from "mongoose";
 import { todoModel } from "./model/todoSchema.js"; // ✅ import todo schema
+import cors from "cors";
+
+
+
 
 const app = express();
+app.use(cors());
+app.use(express.json());
+
+
 const PORT = 7000;
 
 app.use(express.json());
